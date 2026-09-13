@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.20)
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+    project(KevinDataStructures LANGUAGES CXX)
+    set(CMAKE_CXX_STANDARD 20)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
+    set(CMAKE_CXX_EXTENSIONS OFF)
+    include(CTest)
+endif()
+
+add_library(portfolio_datastructures INTERFACE)
+target_include_directories(portfolio_datastructures INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_compile_features(portfolio_datastructures INTERFACE cxx_std_20)
+
+if(BUILD_TESTING)
+    add_executable(data_structures_tests tests/DataStructuresTests.cpp)
+    target_link_libraries(data_structures_tests PRIVATE portfolio_datastructures)
+    add_test(NAME DataStructuresTests COMMAND data_structures_tests)
+endif()

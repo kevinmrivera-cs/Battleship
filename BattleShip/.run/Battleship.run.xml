@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Battleship" type="CMakeRunConfiguration" factoryName="Application" PROJECT_NAME="BattleShip" TARGET_NAME="battleship" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BattleShip" RUN_TARGET_NAME="battleship">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
